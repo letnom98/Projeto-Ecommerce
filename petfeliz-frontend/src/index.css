@@ -1,0 +1,175 @@
+html {
+  font-size: 62.5%; /*tranforma o padrão de 16px para 10px = 1rem -> mais facil para converter*/
+  box-sizing: border-box;
+  --primary-color: #124dba;
+  --secondary-color: #e5f4e3;
+  --third-color: #f04819;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Estilo de layout */
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  background-color: var(--secondary-color);
+  padding: 5px;
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+footer {
+  grid-area: footer;
+  background-color: var(--secondary-color);
+  color: #203040;
+}
+
+/* Classes e formatações gerais */
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--third-color);
+}
+
+header a {
+  font-weight: 550;
+  color: var(--primary-color);
+  padding: 1rem;
+}
+
+a.brand {
+  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  margin-top: 1.6rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.row.center {
+  justify-content: center;
+}
+
+.row.j-space-between {
+  justify-content: space-between;
+}
+
+.row.top {
+  align-items: flex-start;
+}
+
+.col-1 {
+  flex: 1 1 25rem;
+}
+
+.col-2 {
+  flex: 2 1 50rem;
+}
+
+/* Imagens*/
+img {
+  border-radius: 1.5rem;
+}
+
+img.medium {
+  max-height: 29rem;
+  width: 70%;
+}
+
+img.large {
+  max-height: 29rem;
+  width: 100%;
+}
+
+button {
+  color: white;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  line-height: 2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--third-color);
+}
+
+.half-block {
+  width: 50%;
+  margin: auto;
+}
+
+/* Card */
+
+.card {
+  border-radius: 1.5rem;
+  margin: 1rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+/* classes de cores */
+
+.success {
+  color: #20a020;
+}
+
+.danger {
+  color: #a02020;
+}
